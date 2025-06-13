@@ -1,0 +1,87 @@
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----F7D41CE21041F1F1B841FF115D545DEE"
+
+This is an S/MIME signed message
+
+------F7D41CE21041F1F1B841FF115D545DEE
+Content-Type: text/plain
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Illustrates DDS Security is an extension of DDS. It is still possible to
+  run applications without any protection.
+-->
+<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/omg_shared_ca_governance.xsd">
+  <domain_access_rules>
+    <!-- Domain 4 is an "protected domain." That is, only applications that
+      can authenticate and have proper permissions can join it. -->
+    <domain_rule>
+      <domains>
+        <id>4</id>
+      </domains>
+      <allow_unauthenticated_participants>false</allow_unauthenticated_participants>
+      <enable_join_access_control>false</enable_join_access_control>
+      <discovery_protection_kind>NONE</discovery_protection_kind>
+      <liveliness_protection_kind>NONE</liveliness_protection_kind>
+      <rtps_protection_kind>NONE</rtps_protection_kind>
+      <topic_access_rules>
+        <topic_rule>
+          <topic_expression>*</topic_expression>
+          <enable_discovery_protection>false</enable_discovery_protection>
+          <enable_liveliness_protection>false</enable_liveliness_protection>
+          <enable_read_access_control>false</enable_read_access_control>
+          <enable_write_access_control>false</enable_write_access_control>
+          <metadata_protection_kind>NONE</metadata_protection_kind>
+          <data_protection_kind>NONE</data_protection_kind>
+        </topic_rule>
+      </topic_access_rules>
+    </domain_rule>
+  </domain_access_rules>
+</dds>
+
+------F7D41CE21041F1F1B841FF115D545DEE
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+MIIG/AYJKoZIhvcNAQcCoIIG7TCCBukCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggPnMIID4zCCAssCFEsAqporXpJK3sxK4Of0jBFpLGv2MA0GCSqG
+SIb3DQEBCwUAMIGtMQswCQYDVQQGEwJGUjERMA8GA1UECAwIUGljYXJkaWUxHTAb
+BgNVBAcMFEJldGhpc3kgU2FpbnQgUGllcnJlMSQwIgYDVQQKDBtOZW9saWFudCAo
+VGVzdCBJZGVudGl0eSBDQSkxJDAiBgNVBAMMG05lb2xpYW50IChUZXN0IElkZW50
+aXR5IENBKTEgMB4GCSqGSIb3DQEJARYRaW5mb0BuZW9saWFudC5jb20wHhcNMjUw
+NjExMTQ1OTA4WhcNMzUwNjA5MTQ1OTA4WjCBrTELMAkGA1UEBhMCRlIxETAPBgNV
+BAgMCFBpY2FyZGllMR0wGwYDVQQHDBRCZXRoaXN5IFNhaW50IFBpZXJyZTEkMCIG
+A1UECgwbTmVvbGlhbnQgKFRlc3QgSWRlbnRpdHkgQ0EpMSQwIgYDVQQDDBtOZW9s
+aWFudCAoVGVzdCBJZGVudGl0eSBDQSkxIDAeBgkqhkiG9w0BCQEWEWluZm9AbmVv
+bGlhbnQuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjA60PYiT
+QSSUj0v6X3RSWQAOW+8lqlFxVCY693nI/PSlACZ2YzPFDbzkVIJICvJCwh1BFAGM
+drsPAIVcNJLnZiJmihFfQVLAm27PlxqzxOg2m2RvVZYGmShUytmnQ0JCHUPSqxXg
+QNvpHkIRSkgA9N5fNTD0VRzc0wo7eocqFgRnnJubDGfocu5D4yOlIBMLJmkjCQrY
+rhRkFFqhZc9TOFu4xdHOVEoBibR6YWxJjYlLU433mCu8nrFpBad6VHxGhkocniH2
+zrUcpBQIqBXafQEhtZEVSi9Tbil3IMSLKMEAOON2Vi5Np2cZ1hUwQE+p/t6biTnu
+0iEZ/qv3jYg3JwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQB2Y3tfMye9SeLjFT1M
+taqOFiBmT0/zXR8DNCipB2fyeITtM2uAF+N+J/7Z6HBCpItauZwzPfY2g6pTUWJ/
+vy+1rO8ZUg4S44fG3+jQCko44HFDiy7zE6Q0kZgsx89+XluxGyYRiBwcqrcGcbGx
+mTOJs9/KZ8CYSMvDZu5xRE699F3fmc4ihFf/fNmG8J3QNxvM6Q4GcXpi0CtD9hP3
+xEse28mviif7LKpYUUqak+hzFV/4JQ3c3emQWT7r0wbbpjDhw2QOGUB/StANOjeJ
+lfeJmdsUYuL9rU9Cfe8Y503I/ZIVfn1QIhP0GcrJEd0R5bpDDnGx/LFhVj19CXdV
+UzaUMYIC2TCCAtUCAQEwgcYwga0xCzAJBgNVBAYTAkZSMREwDwYDVQQIDAhQaWNh
+cmRpZTEdMBsGA1UEBwwUQmV0aGlzeSBTYWludCBQaWVycmUxJDAiBgNVBAoMG05l
+b2xpYW50IChUZXN0IElkZW50aXR5IENBKTEkMCIGA1UEAwwbTmVvbGlhbnQgKFRl
+c3QgSWRlbnRpdHkgQ0EpMSAwHgYJKoZIhvcNAQkBFhFpbmZvQG5lb2xpYW50LmNv
+bQIUSwCqmitekkrezErg5/SMEWksa/YwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjUwNjExMTUyMDUx
+WjAvBgkqhkiG9w0BCQQxIgQgCG93yrETJnBPFe8EME/Go6dnf9LDnIIjZ/3TjO6j
++1MweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwDQYJKoZIhvcNAQEBBQAEggEA
+DocFyOGQaLxujonh/IyBQw7I/OHNJce0dG0UjfXO96hyfRVk0pAxJYIqpwB61Zgz
+1u7PKm9CvgHejAaxEb7qW1NeyAZZGJOyEw4RDqTBTmF9OIioRIXrmjTKETEVVYo9
+AUbd6eQXJ/khBZzp6fUTDi4/dOPbHE0TLIB8axRqqyFY3rYvx2OqF9reWzQuaabL
+GcS8q3w3WenLn0NSX0mSEETElrmgIM2jB9tY9pPsZjrUvOVZrhTh402/298fnoI9
+pT9qGB+HVKm2K+RBa+NaZS1c/JmlgFYAgqAKqAR+mc7YpP2/9uBLCb9tdTeu7ko6
+x7TKaRKZLdS36xLSUgAA2A==
+
+------F7D41CE21041F1F1B841FF115D545DEE--
+
