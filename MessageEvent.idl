@@ -1,0 +1,8 @@
+#include "dds-opcua_builtin_types.idl"
+@topic
+struct MessageEvent {
+	OMG::DDSOPCUA::OPCUA2DDS::DateTime Time;
+	unsigned short Severity;
+	OMG::DDSOPCUA::OPCUA2DDS::LocalizedText Message;
+	string SourceName;
+};
